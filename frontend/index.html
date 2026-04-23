@@ -2,19 +2,27 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>チャットアプリをつくってみよう</title>
-    <link rel="stylesheet" href="src/style.css" />
+    <title>こめぽいぽい</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/index.css" />
   </head>
   <body>
-    <h1>チャットアプリをつくってみよう</h1>
-    <form id="chatSend" action="">
-      <input id="chatText" autocomplete="off" />
+    <div class="header-info">
+      <h3>好きなコメントを入力して流せます</h3>
+      <p>コメントは50文字以内です</p>
+      <p>節度を守って楽しみましょう！</p>
+    </div>
+    <form id="chatForm" action="">
+      <input id="chatText" autocomplete="off" maxlength="50" />
+      <span id="charCount">0/50</span>
       <button class="sendButton">送信</button>
     </form>
-    <ul id="timeline">
-      <li>チャットアプリへようこそ！</li>
-    </ul>
-    <div class="scroll-text">sample text</div>
-    <script type="module" src="src/main.ts"></script>
+    <ul id="timeline"></ul>
+    <script type="module" src="src/index.ts"></script>
   </body>
 </html>

@@ -1,6 +1,6 @@
 import { socket } from "./socket.ts";
 
-const form = document.getElementById("chatSend") as HTMLFormElement;
+const form = document.getElementById("chatForm") as HTMLFormElement;
 const input = document.getElementById("chatText") as HTMLInputElement;
 const timeline = document.getElementById("timeline") as HTMLUListElement;
 
