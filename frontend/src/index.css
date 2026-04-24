@@ -14,29 +14,45 @@ body {
 
 .header-info {
   text-align: center;
+  margin-top: 30px;
   margin-bottom: 20px;
 }
 
-#chatForm {
+#chat-form {
   display: flex;
+  flex-direction: column;
   align-items: center;
   padding: 3px;
   width: 100%;
 }
-#chatText {
+
+.input-row {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 10px;
+  gap: 10px;
+}
+
+#chat-text {
   border: 2px solid #ccc;
   padding: 10px;
   flex: 1;
-  margin-right: 10px;
   border-radius: 5px;
 }
-.sendButton {
+#send-button {
   width: auto;
   background: rgb(130, 224, 255);
   border: none;
   padding: 10px;
   border-radius: 5px;
 }
+
+#error-message {
+  color: #d32f2f;
+  margin-top: 8px;
+}
+
 #timeline {
   list-style-type: none;
   margin: 0;
