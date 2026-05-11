@@ -20,8 +20,8 @@ const io = new Server(httpServer, {
   },
 });
 
-app.get("/", (req, res) => {
-  res.send("hello world");
+app.get("/api/health", (req, res) => {
+  res.send("OK");
 });
 
 io.on("connection", (socket) => {

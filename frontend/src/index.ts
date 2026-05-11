@@ -39,7 +39,7 @@ form.addEventListener("submit", (e) => {
 socket.on("chat message", (msg: string) => {
   const item = document.createElement("li");
   item.textContent = msg;
-  timeline.appendChild(item);
+  // timeline.appendChild(item);
 });
 
 function updateCharCount() {
