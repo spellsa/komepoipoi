@@ -2,7 +2,7 @@ import { socket } from "./socket.ts";
 
 const form = document.getElementById("chat-form") as HTMLFormElement;
 const chatTextInput = document.getElementById("chat-text") as HTMLInputElement;
-const timeline = document.getElementById("timeline") as HTMLUListElement;
+// const timeline = document.getElementById("timeline") as HTMLUListElement;
 const charCount = document.getElementById("char-count") as HTMLSpanElement;
 const errorMessage = document.getElementById("error-message") as HTMLParagraphElement;
 
@@ -36,11 +36,11 @@ form.addEventListener("submit", (e) => {
   chatTextInput.focus();
 });
 
-socket.on("chat message", (msg: string) => {
-  const item = document.createElement("li");
-  item.textContent = msg;
-  // timeline.appendChild(item);
-});
+// socket.on("chat message", (msg: string) => {
+//   const item = document.createElement("li");
+//   item.textContent = msg;
+//   timeline.appendChild(item);
+// });
 
 function updateCharCount() {
   const length = chatTextInput.value.length;

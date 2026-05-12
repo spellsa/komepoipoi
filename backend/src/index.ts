@@ -9,13 +9,14 @@ const MESSAGE_LIMIT_MS = 10000;
 const bannedClientIds = new Set<string>();
 const clientMessageTimestamps: Record<string, number[]> = {};
 
-const port = 8000;
+const port = Number(process.env.PORT) || 8000;
+const frontendOrigin = process.env.FRONTEND_ORIGIN || "http://localhost:5173";
 
 const app = express();
 const httpServer = createServer(app);
 const io = new Server(httpServer, {
   cors: {
-    origin: "http://localhost:5173",
+    origin: frontendOrigin,
     methods: ["GET", "POST"],
   },
 });
