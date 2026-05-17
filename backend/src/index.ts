@@ -9,7 +9,9 @@ const MESSAGE_LIMIT_MS = 10000;
 const bannedClientIds = new Set<string>();
 const clientMessageTimestamps: Record<string, number[]> = {};
 
-const port = Number(process.env.PORT) || 8000;
+const PORT = Number(process.env.PORT) || 8000;
+const HOST = process.env.HOST || "0.0.0.0";
+
 const frontendOrigin = process.env.FRONTEND_ORIGIN || "http://localhost:5173";
 
 const app = express();
@@ -50,6 +52,6 @@ io.on("connection", (socket) => {
   });
 });
 
-httpServer.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
+httpServer.listen(PORT, HOST, () => {
+  console.log(`Server is running on ${HOST}:${PORT}`);
 });
